@@ -17,6 +17,8 @@
 		0320C8782B68080400AEE6F2 /* viento.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0320C8772B68080400AEE6F2 /* viento.wav */; };
 		0320C87A2B68080A00AEE6F2 /* truenos.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0320C8792B68080A00AEE6F2 /* truenos.wav */; };
 		0320C87C2B68081000AEE6F2 /* lluvia.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0320C87B2B68081000AEE6F2 /* lluvia.wav */; };
+		03F930962B6AECA30037A4F3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 03F930952B6AECA30037A4F3 /* README.md */; };
+		03F930982B6AED180037A4F3 /* rain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03F930972B6AED180037A4F3 /* rain.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		0320C8792B68080A00AEE6F2 /* truenos.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = truenos.wav; sourceTree = "<group>"; };
 		0320C87B2B68081000AEE6F2 /* lluvia.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lluvia.wav; sourceTree = "<group>"; };
 		034B6DF92B684D3000610698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		03F930952B6AECA30037A4F3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		03F930972B6AED180037A4F3 /* rain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rain.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		0320C8522B6802AA00AEE6F2 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				03F930952B6AECA30037A4F3 /* README.md */,
 				0320C8532B6802AA00AEE6F2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -139,6 +144,7 @@
 		0320C8762B6807F600AEE6F2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				03F930972B6AED180037A4F3 /* rain.wav */,
 				0320C8772B68080400AEE6F2 /* viento.wav */,
 				0320C8792B68080A00AEE6F2 /* truenos.wav */,
 				0320C87B2B68081000AEE6F2 /* lluvia.wav */,
@@ -250,9 +256,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F930962B6AECA30037A4F3 /* README.md in Resources */,
 				0320C8542B6802AA00AEE6F2 /* Preview Assets.xcassets in Resources */,
 				0320C87C2B68081000AEE6F2 /* lluvia.wav in Resources */,
 				0320C8512B6802AA00AEE6F2 /* Assets.xcassets in Resources */,
+				03F930982B6AED180037A4F3 /* rain.wav in Resources */,
 				0320C8782B68080400AEE6F2 /* viento.wav in Resources */,
 				0320C87A2B68080A00AEE6F2 /* truenos.wav in Resources */,
 			);
