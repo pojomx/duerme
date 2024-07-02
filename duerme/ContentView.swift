@@ -9,19 +9,55 @@ import SwiftUI
 import AVFoundation
 
 struct ContentView: View {
-    @State var playerLluvia: AVAudioPlayer?
-    @State var playerViento: AVAudioPlayer?
-    @State var playerTrueno: AVAudioPlayer?
-    @State var playerRain: AVAudioPlayer?
     
     @State var reproduciendo: Bool = false
     @State private var isEditing = false
     
-    @State var volumeLluvia = 1.0 // or some value binded
-    @State var volumeViento = 1.0 // or some value binded
-    @State var volumeTrueno = 1.0 // or some value binded
-    @State var volumeRain = 1.0 // or some value binded
+    class SoundElement: Identifiable {
+        var id: String
+        var player: AVAudioPlayer?
+        var volume: Float = 1.0
+        var name: String
+        var fileName: String
+        var fileExtension: String
+        
+        init(player: AVAudioPlayer? = nil, volume: Float, name: String, fileName: String, fileExtension: String) {
+            self.id = "\(fileName)\(fileExtension)"
+            self.player = player
+            self.volume = volume
+            self.name = name
+            self.fileName = fileName
+            self.fileExtension = fileExtension
+        }
+        
+        func setSound() {
+            guard let url = Bundle.main.url(forResource: self.fileName, withExtension: self.fileExtension) else { return }
+            
+            print("URL Establecida: \(url)")
+            
+            if let player = try? AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue) {
+                print("player inicializado")
+                player.numberOfLoops = -1 //Infinite
+                print("player en loop infinito")
+                player.volume = self.volume
+                print("player volumen en \(volume)")
+                player.play()
+                print("player reproduciendo")
+                self.player = player
+                print("player guardado")
+            } else {
+                print("Error: Error starting player.")
+                return
+            }
+        }
+    }
     
+    @State var soundList: [SoundElement] = [
+        SoundElement(player: AVAudioPlayer(), volume: 1.0, name: "Lluvia", fileName: "lluvia-pojoclan", fileExtension: "wav"),
+        //SoundElement(player: AVAudioPlayer(), volume: 1.0, name: "Truenos", fileName: "truenos", fileExtension: "wav"),
+        //SoundElement(player: AVAudioPlayer(), volume: 1.0, name: "Viento", fileName: "viento", fileExtension: "wav")
+    ]
+            
     var body: some View {
         VStack {
             Spacer()
@@ -37,69 +73,25 @@ struct ContentView: View {
             }
             Spacer()
             
-
-
-            Slider(value: $volumeViento,
-                   in: 0...1,
-                   step: 0.01
-            )   
-            {
-                Text("Volume Viento")
-            } minimumValueLabel: {
-                Text("Viento")
-            } maximumValueLabel: {
-                Text("")
-            } onEditingChanged: { editing in
-                isEditing = editing
-                playerViento?.volume = Float(volumeViento)
+            ForEach($soundList){ $sound in
+                Slider(value: $sound.volume,
+                       in: 0...1,
+                       step: 0.01
+                )
+                {
+                    Text("Volume \(sound.name)")
+                } minimumValueLabel: {
+                    Text("\(sound.name)")
+                } maximumValueLabel: {
+                    Text("")
+                } onEditingChanged: { editing in
+                    isEditing = editing
+                    sound.player?.volume = Float(sound.volume)
+                }
             }
             
-            Slider(value: $volumeLluvia,
-                   in: 0...1,
-                   step: 0.01
-            )
-            {
-                Text("Volume Lluvia")
-            } minimumValueLabel: {
-                Text("Lluvia")
-            } maximumValueLabel: {
-                Text("")
-            } onEditingChanged: { editing in
-                isEditing = editing
-                playerLluvia?.volume = Float(volumeLluvia)
-            }
-               
-            
-            Slider(value: $volumeTrueno,
-                   in: 0...1,
-                   step: 0.01
-            )
-            {
-                Text("Volume Trueno")
-            } minimumValueLabel: {
-                Text("Trueno")
-            } maximumValueLabel: {
-                Text("")
-            } onEditingChanged: { editing in
-                isEditing = editing
-                playerTrueno?.volume = Float(volumeTrueno)
-            }
-            Slider(value: $volumeRain,
-                   in: 0...1,
-                   step: 0.01
-            )
-            {
-                Text("Volume Rain")
-            } minimumValueLabel: {
-                Text("Rain")
-            } maximumValueLabel: {
-                Text("")
-            } onEditingChanged: { editing in
-                isEditing = editing
-                playerRain?.volume = Float(volumeRain)
-            }
             Spacer()
-            Link("Sígueme en mis redes sociales @pojomx", destination: URL(string: "https://www.twitter.com/pojomx")!)
+            Link("Sígueme en mis redes sociales @pojomx", destination: URL(string: "https://www.x.com/pojomx")!)
         }
         .padding()
         .onAppear(perform: {
@@ -112,50 +104,22 @@ struct ContentView: View {
     func playSounds() {
         
         if(reproduciendo) {
-            playerLluvia?.stop()
-            playerTrueno?.stop()
-            playerViento?.stop()
-            playerRain?.stop()
+            soundList.forEach { sonido in
+                sonido.player?.stop()
+            }
             reproduciendo = false;
             return
         }
         
         reproduciendo = true;
         
-        guard let urlLluvia = Bundle.main.url(forResource: "lluvia", withExtension: "wav") else { return }
-        guard let urlViento = Bundle.main.url(forResource: "viento", withExtension: "wav") else { return }
-        guard let urlTruenos = Bundle.main.url(forResource: "truenos", withExtension: "wav") else { return }
-        guard let urlRain = Bundle.main.url(forResource: "rain", withExtension: "wav") else { return }
-
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
 
-            playerLluvia = try? AVAudioPlayer(contentsOf: urlLluvia, fileTypeHint: AVFileType.wav.rawValue)
-            playerViento = try? AVAudioPlayer(contentsOf: urlViento, fileTypeHint: AVFileType.wav.rawValue)
-            playerTrueno = try? AVAudioPlayer(contentsOf: urlTruenos, fileTypeHint: AVFileType.wav.rawValue)
-            playerRain = try? AVAudioPlayer(contentsOf: urlRain, fileTypeHint: AVFileType.wav.rawValue)
-            
-            playerLluvia?.numberOfLoops = -1
-            playerViento?.numberOfLoops = -1
-            playerTrueno?.numberOfLoops = -1
-            playerRain?.numberOfLoops = -1
-            
-            playerTrueno?.volume = Float(volumeTrueno)
-            playerLluvia?.volume = Float(volumeLluvia)
-            playerViento?.volume = Float(volumeViento)
-            playerRain?.volume = Float(volumeRain)
-    
-            guard let playerViento = playerViento else { return }
-            guard let playerLluvia = playerLluvia else { return }
-            guard let playerTrueno = playerTrueno else { return }
-            guard let playerRain = playerRain else { return }
-
-            playerTrueno.play()
-            playerLluvia.play()
-            playerViento.play()
-            playerRain.play()
-            
+            soundList.forEach { sonido in
+                sonido.setSound()
+            }
         } catch let error {
             print(error.localizedDescription)
         }

@@ -14,11 +14,8 @@
 		0320C85E2B6802AA00AEE6F2 /* duermeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0320C85D2B6802AA00AEE6F2 /* duermeTests.swift */; };
 		0320C8682B6802AA00AEE6F2 /* duermeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0320C8672B6802AA00AEE6F2 /* duermeUITests.swift */; };
 		0320C86A2B6802AA00AEE6F2 /* duermeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0320C8692B6802AA00AEE6F2 /* duermeUITestsLaunchTests.swift */; };
-		0320C8782B68080400AEE6F2 /* viento.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0320C8772B68080400AEE6F2 /* viento.wav */; };
-		0320C87A2B68080A00AEE6F2 /* truenos.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0320C8792B68080A00AEE6F2 /* truenos.wav */; };
-		0320C87C2B68081000AEE6F2 /* lluvia.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0320C87B2B68081000AEE6F2 /* lluvia.wav */; };
+		034A00372C33750D00F5D554 /* lluvia-pojoclan.wav in Resources */ = {isa = PBXBuildFile; fileRef = 034A00362C33750D00F5D554 /* lluvia-pojoclan.wav */; };
 		03F930962B6AECA30037A4F3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 03F930952B6AECA30037A4F3 /* README.md */; };
-		03F930982B6AED180037A4F3 /* rain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03F930972B6AED180037A4F3 /* rain.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +49,7 @@
 		0320C8772B68080400AEE6F2 /* viento.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = viento.wav; sourceTree = "<group>"; };
 		0320C8792B68080A00AEE6F2 /* truenos.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = truenos.wav; sourceTree = "<group>"; };
 		0320C87B2B68081000AEE6F2 /* lluvia.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lluvia.wav; sourceTree = "<group>"; };
+		034A00362C33750D00F5D554 /* lluvia-pojoclan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "lluvia-pojoclan.wav"; path = "../../../../../Downloads/lluvia-pojoclan.wav"; sourceTree = "<group>"; };
 		034B6DF92B684D3000610698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		03F930952B6AECA30037A4F3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		03F930972B6AED180037A4F3 /* rain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rain.wav; sourceTree = "<group>"; };
@@ -144,6 +142,7 @@
 		0320C8762B6807F600AEE6F2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				034A00362C33750D00F5D554 /* lluvia-pojoclan.wav */,
 				03F930972B6AED180037A4F3 /* rain.wav */,
 				0320C8772B68080400AEE6F2 /* viento.wav */,
 				0320C8792B68080A00AEE6F2 /* truenos.wav */,
@@ -258,11 +257,8 @@
 			files = (
 				03F930962B6AECA30037A4F3 /* README.md in Resources */,
 				0320C8542B6802AA00AEE6F2 /* Preview Assets.xcassets in Resources */,
-				0320C87C2B68081000AEE6F2 /* lluvia.wav in Resources */,
 				0320C8512B6802AA00AEE6F2 /* Assets.xcassets in Resources */,
-				03F930982B6AED180037A4F3 /* rain.wav in Resources */,
-				0320C8782B68080400AEE6F2 /* viento.wav in Resources */,
-				0320C87A2B68080A00AEE6F2 /* truenos.wav in Resources */,
+				034A00372C33750D00F5D554 /* lluvia-pojoclan.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,11 +452,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = duerme/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sonidos en loop para dormir";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,11 +483,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = duerme/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sonidos en loop para dormir";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
