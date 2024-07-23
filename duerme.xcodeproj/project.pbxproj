@@ -15,7 +15,9 @@
 		0320C8682B6802AA00AEE6F2 /* duermeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0320C8672B6802AA00AEE6F2 /* duermeUITests.swift */; };
 		0320C86A2B6802AA00AEE6F2 /* duermeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0320C8692B6802AA00AEE6F2 /* duermeUITestsLaunchTests.swift */; };
 		034A00372C33750D00F5D554 /* lluvia-pojoclan.wav in Resources */ = {isa = PBXBuildFile; fileRef = 034A00362C33750D00F5D554 /* lluvia-pojoclan.wav */; };
+		03F1FF6C2C350A9F00A50E28 /* lluvia-fuerte.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03F1FF6B2C350A9F00A50E28 /* lluvia-fuerte.wav */; };
 		03F930962B6AECA30037A4F3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 03F930952B6AECA30037A4F3 /* README.md */; };
+		03FAA2692C4FECB1000B5F8D /* SoundElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FAA2682C4FECB1000B5F8D /* SoundElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +53,10 @@
 		0320C87B2B68081000AEE6F2 /* lluvia.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lluvia.wav; sourceTree = "<group>"; };
 		034A00362C33750D00F5D554 /* lluvia-pojoclan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "lluvia-pojoclan.wav"; path = "../../../../../Downloads/lluvia-pojoclan.wav"; sourceTree = "<group>"; };
 		034B6DF92B684D3000610698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		03F1FF6B2C350A9F00A50E28 /* lluvia-fuerte.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "lluvia-fuerte.wav"; sourceTree = "<group>"; };
 		03F930952B6AECA30037A4F3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		03F930972B6AED180037A4F3 /* rain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rain.wav; sourceTree = "<group>"; };
+		03FAA2682C4FECB1000B5F8D /* SoundElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundElement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +107,12 @@
 		0320C84B2B6802A900AEE6F2 /* duerme */ = {
 			isa = PBXGroup;
 			children = (
-				034B6DF92B684D3000610698 /* Info.plist */,
 				0320C8762B6807F600AEE6F2 /* Assets */,
+				03FAA2672C4FEC87000B5F8D /* Model */,
 				0320C84C2B6802A900AEE6F2 /* duermeApp.swift */,
 				0320C84E2B6802A900AEE6F2 /* ContentView.swift */,
 				0320C8502B6802AA00AEE6F2 /* Assets.xcassets */,
+				034B6DF92B684D3000610698 /* Info.plist */,
 				0320C8522B6802AA00AEE6F2 /* Preview Content */,
 			);
 			path = duerme;
@@ -143,12 +148,21 @@
 			isa = PBXGroup;
 			children = (
 				034A00362C33750D00F5D554 /* lluvia-pojoclan.wav */,
+				03F1FF6B2C350A9F00A50E28 /* lluvia-fuerte.wav */,
 				03F930972B6AED180037A4F3 /* rain.wav */,
 				0320C8772B68080400AEE6F2 /* viento.wav */,
 				0320C8792B68080A00AEE6F2 /* truenos.wav */,
 				0320C87B2B68081000AEE6F2 /* lluvia.wav */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		03FAA2672C4FEC87000B5F8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03FAA2682C4FECB1000B5F8D /* SoundElement.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F1FF6C2C350A9F00A50E28 /* lluvia-fuerte.wav in Resources */,
 				03F930962B6AECA30037A4F3 /* README.md in Resources */,
 				0320C8542B6802AA00AEE6F2 /* Preview Assets.xcassets in Resources */,
 				0320C8512B6802AA00AEE6F2 /* Assets.xcassets in Resources */,
@@ -285,6 +300,7 @@
 			files = (
 				0320C84F2B6802A900AEE6F2 /* ContentView.swift in Sources */,
 				0320C84D2B6802A900AEE6F2 /* duermeApp.swift in Sources */,
+				03FAA2692C4FECB1000B5F8D /* SoundElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
