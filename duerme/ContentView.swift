@@ -14,47 +14,51 @@ struct ContentView: View {
     @State private var isEditing = false
     
     @State var soundList: [SoundElement] = [
-        SoundElement(player: AVAudioPlayer(), volume: 1.0, name: "Lluvia Ligera", fileName: "lluvia-pojoclan", fileExtension: "wav"),
-        SoundElement(player: AVAudioPlayer(), volume: 0.0, name: "Lluvia Fuerte", fileName: "lluvia-fuerte", fileExtension: "wav"),
+        //SoundElement(player: AVAudioPlayer(), volume: 0.0, name: "Lluvia Suave", fileName: "lluvia", fileExtension: "wav", iconName: "cloud.drizzle"),
+        SoundElement(player: AVAudioPlayer(), volume: 1.0, name: "Lluvia Ligera", fileName: "lluvia-pojoclan", fileExtension: "wav", iconName: "cloud.rain"),
+        //SoundElement(player: AVAudioPlayer(), volume: 0.0, name: "Lluvia Fuerte", fileName: "lluvia-fuerte", fileExtension: "wav", iconName: "cloud.heavyrain"),
         //SoundElement(player: AVAudioPlayer(), volume: 1.0, name: "Viento", fileName: "viento", fileExtension: "wav")
     ]
             
     var body: some View {
         VStack {
-            Spacer()
-            Image(systemName: "moon")
-                .imageScale(.large)
+            Image(systemName: "moon.circle.fill")
+                .resizable()
                 .foregroundStyle(.tint)
-            Text("¡buenas noches!")
+                .frame(width: 100, height: 100)
+                .padding()
             Spacer()
             Button {
                 self.playSounds()
             } label: {
-                Text(reproduciendo ? "Detener" : "Reproducir")
+                Image(systemName: reproduciendo ? "pause.fill" : "play.fill")
+                    .resizable()
+                    .frame(width:50, height: 50)
+                    
             }
             Spacer()
-            
-            ForEach($soundList){ $sound in
-                Slider(value: $sound.volume,
-                       in: 0...1,
-                       step: 0.01
-                )
-                {
-                    Text("Volume \(sound.name)")
-                } minimumValueLabel: {
-                    Text("\(sound.name)")
-                } maximumValueLabel: {
-                    Text("")
-                } onEditingChanged: { editing in
-                    isEditing = editing
-                    sound.player?.volume = Float(sound.volume)
+                ForEach($soundList){ $sound in
+                    Slider(value: $sound.volume,
+                           in: 0...1,
+                           step: 0.01
+                    )
+                    {
+                        Text("Volume \(sound.name)")
+                    } minimumValueLabel: {
+                        Label("", systemImage: sound.iconName)
+                    } maximumValueLabel: {
+                        Label("", systemImage: "")
+                    } onEditingChanged: { editing in
+                        isEditing = editing
+                        sound.player?.volume = Float(sound.volume)
+                    }
                 }
+                Spacer()
             }
-            
-            Spacer()
-            Link("Sígueme en mis redes sociales @pojomx", destination: URL(string: "https://www.x.com/pojomx")!)
-        }
-        .padding()
+            .padding()
+            Link("twitter.com/pojomx", destination: URL(string: "https://www.x.com/pojomx")!)
+                .padding()
+                .tint(.red)
         .onAppear(perform: {
             playSounds()
         })

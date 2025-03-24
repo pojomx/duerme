@@ -7,6 +7,7 @@
 
 import Foundation
 import AVFAudio
+import AVFoundation
 
 class SoundElement: Identifiable {
     var id: String
@@ -15,14 +16,16 @@ class SoundElement: Identifiable {
     var name: String
     var fileName: String
     var fileExtension: String
+    var iconName: String
     
-    init(player: AVAudioPlayer? = nil, volume: Float, name: String, fileName: String, fileExtension: String) {
+    init(player: AVAudioPlayer? = nil, volume: Float, name: String, fileName: String, fileExtension: String, iconName: String) {
         self.id = "\(fileName)\(fileExtension)"
         self.player = player
         self.volume = volume
         self.name = name
         self.fileName = fileName
         self.fileExtension = fileExtension
+        self.iconName = iconName
     }
     
     func setSound() {
