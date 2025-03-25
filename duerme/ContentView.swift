@@ -8,37 +8,53 @@
 import SwiftUI
 import AVFoundation
 
+
 struct ContentView: View {
     
-    @State var reproduciendo: Bool = false
+    @State private var reproduciendo: Bool = false
     @State private var isEditing = false
+    @State private var isShowingSheet: Bool = false
     
     @State var soundList: [SoundElement] = [
-        //SoundElement(player: AVAudioPlayer(), volume: 0.0, name: "Lluvia Suave", fileName: "lluvia", fileExtension: "wav", iconName: "cloud.drizzle"),
-        SoundElement(player: AVAudioPlayer(), volume: 1.0, name: "Lluvia Ligera", fileName: "lluvia-pojoclan", fileExtension: "wav", iconName: "cloud.rain"),
-        //SoundElement(player: AVAudioPlayer(), volume: 0.0, name: "Lluvia Fuerte", fileName: "lluvia-fuerte", fileExtension: "wav", iconName: "cloud.heavyrain"),
-        //SoundElement(player: AVAudioPlayer(), volume: 1.0, name: "Viento", fileName: "viento", fileExtension: "wav")
+        SoundElement(
+            player: AVAudioPlayer(),
+            volume: 1.0,
+            name: "Lluvia Ligera",
+            fileName: "lluvia-pojoclan",
+            fileExtension: "wav",
+            iconName: "cloud.rain"
+        ),
+        
     ]
             
     var body: some View {
         VStack {
+            HStack {
+                Spacer()
+                Button {
+                    isShowingSheet.toggle()
+                } label: {
+                    Image(systemName: "info.circle")
+                        .resizable()
+                        .frame(width:20, height: 20)
+                }
+                .sheet(isPresented: $isShowingSheet) {
+                    SettigsView()
+                        .presentationDragIndicator(.visible)
+                        .presentationDetents([.medium, .large])
+                }
+            }
+
             Image(systemName: "moon.circle.fill")
                 .resizable()
-                .foregroundStyle(.tint)
                 .frame(width: 100, height: 100)
                 .padding()
+                .padding(.top, -10)
+            
             Spacer()
-            Button {
-                self.playSounds()
-            } label: {
-                Image(systemName: reproduciendo ? "pause.fill" : "play.fill")
-                    .resizable()
-                    .frame(width:50, height: 50)
-                    
-            }
-            Spacer()
-                ForEach($soundList){ $sound in
-                    Slider(value: $sound.volume,
+            Section {
+                ForEach($soundList) { $sound in
+                     Slider(value: $sound.volume,
                            in: 0...1,
                            step: 0.01
                     )
@@ -53,12 +69,19 @@ struct ContentView: View {
                         sound.player?.volume = Float(sound.volume)
                     }
                 }
-                Spacer()
             }
-            .padding()
-            Link("twitter.com/pojomx", destination: URL(string: "https://www.x.com/pojomx")!)
-                .padding()
-                .tint(.red)
+            Spacer()
+            Button {
+                self.playSounds()
+            } label: {
+                Image(systemName: reproduciendo ? "pause.fill" : "play.fill")
+                    .resizable()
+                    .frame(width:50, height: 50)
+                
+            }
+        }
+        .foregroundStyle(LinearGradient(colors: [.pink, .purple], startPoint: .top, endPoint: .bottom))
+        .padding()
         .onAppear(perform: {
             playSounds()
         })

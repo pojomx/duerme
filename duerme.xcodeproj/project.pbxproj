@@ -17,6 +17,7 @@
 		03F1FF6C2C350A9F00A50E28 /* lluvia-fuerte.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03F1FF6B2C350A9F00A50E28 /* lluvia-fuerte.wav */; };
 		03F930962B6AECA30037A4F3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 03F930952B6AECA30037A4F3 /* README.md */; };
 		03FAA2692C4FECB1000B5F8D /* SoundElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FAA2682C4FECB1000B5F8D /* SoundElement.swift */; };
+		A115D2EA2D92FE2D00AD2578 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115D2E92D92FE2300AD2578 /* SettingsView.swift */; };
 		A173885F2D55E4EB006ED33C /* lluvia-pojoclan.wav in Resources */ = {isa = PBXBuildFile; fileRef = A173885E2D55E4EB006ED33C /* lluvia-pojoclan.wav */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		03F930952B6AECA30037A4F3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		03F930972B6AED180037A4F3 /* rain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rain.wav; sourceTree = "<group>"; };
 		03FAA2682C4FECB1000B5F8D /* SoundElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundElement.swift; sourceTree = "<group>"; };
+		A115D2E92D92FE2300AD2578 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A173885E2D55E4EB006ED33C /* lluvia-pojoclan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "lluvia-pojoclan.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				0320C8762B6807F600AEE6F2 /* Assets */,
 				03FAA2672C4FEC87000B5F8D /* Model */,
 				0320C84C2B6802A900AEE6F2 /* duermeApp.swift */,
+				A115D2E92D92FE2300AD2578 /* SettingsView.swift */,
 				0320C84E2B6802A900AEE6F2 /* ContentView.swift */,
 				0320C8502B6802AA00AEE6F2 /* Assets.xcassets */,
 				034B6DF92B684D3000610698 /* Info.plist */,
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0320C84F2B6802A900AEE6F2 /* ContentView.swift in Sources */,
+				A115D2EA2D92FE2D00AD2578 /* SettingsView.swift in Sources */,
 				0320C84D2B6802A900AEE6F2 /* duermeApp.swift in Sources */,
 				03FAA2692C4FECB1000B5F8D /* SoundElement.swift in Sources */,
 			);
