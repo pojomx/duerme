@@ -14,7 +14,6 @@
 		0320C85E2B6802AA00AEE6F2 /* duermeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0320C85D2B6802AA00AEE6F2 /* duermeTests.swift */; };
 		0320C8682B6802AA00AEE6F2 /* duermeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0320C8672B6802AA00AEE6F2 /* duermeUITests.swift */; };
 		0320C86A2B6802AA00AEE6F2 /* duermeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0320C8692B6802AA00AEE6F2 /* duermeUITestsLaunchTests.swift */; };
-		03F1FF6C2C350A9F00A50E28 /* lluvia-fuerte.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03F1FF6B2C350A9F00A50E28 /* lluvia-fuerte.wav */; };
 		03F930962B6AECA30037A4F3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 03F930952B6AECA30037A4F3 /* README.md */; };
 		03FAA2692C4FECB1000B5F8D /* SoundElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FAA2682C4FECB1000B5F8D /* SoundElement.swift */; };
 		A115D2EA2D92FE2D00AD2578 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A115D2E92D92FE2300AD2578 /* SettingsView.swift */; };
@@ -286,7 +285,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03F1FF6C2C350A9F00A50E28 /* lluvia-fuerte.wav in Resources */,
 				03F930962B6AECA30037A4F3 /* README.md in Resources */,
 				0320C8542B6802AA00AEE6F2 /* Preview Assets.xcassets in Resources */,
 				A173885F2D55E4EB006ED33C /* lluvia-pojoclan.wav in Resources */,
