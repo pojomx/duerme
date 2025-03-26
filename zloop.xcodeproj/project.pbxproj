@@ -40,14 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0320C8492B6802A900AEE6F2 /* duerme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = duerme.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0320C8492B6802A900AEE6F2 /* zloop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zloop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0320C84C2B6802A900AEE6F2 /* duermeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = duermeApp.swift; sourceTree = "<group>"; };
 		0320C84E2B6802A900AEE6F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0320C8502B6802AA00AEE6F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0320C8532B6802AA00AEE6F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0320C8592B6802AA00AEE6F2 /* duermeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = duermeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0320C8592B6802AA00AEE6F2 /* zloopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zloopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0320C85D2B6802AA00AEE6F2 /* duermeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = duermeTests.swift; sourceTree = "<group>"; };
-		0320C8632B6802AA00AEE6F2 /* duermeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = duermeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0320C8632B6802AA00AEE6F2 /* zloopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zloopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0320C8672B6802AA00AEE6F2 /* duermeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = duermeUITests.swift; sourceTree = "<group>"; };
 		0320C8692B6802AA00AEE6F2 /* duermeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = duermeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0320C8772B68080400AEE6F2 /* viento.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = viento.wav; sourceTree = "<group>"; };
@@ -61,6 +61,7 @@
 		A115D2E92D92FE2300AD2578 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A115D2EE2D9358AE00AD2578 /* CustomListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListRowView.swift; sourceTree = "<group>"; };
 		A115D2F22D9383A300AD2578 /* DuermeLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuermeLogo.swift; sourceTree = "<group>"; };
+		A117AEF22D94510700ECCA25 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		A173885E2D55E4EB006ED33C /* lluvia-pojoclan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "lluvia-pojoclan.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +93,7 @@
 		0320C8402B6802A900AEE6F2 = {
 			isa = PBXGroup;
 			children = (
-				0320C84B2B6802A900AEE6F2 /* duerme */,
+				0320C84B2B6802A900AEE6F2 /* zloop */,
 				0320C85C2B6802AA00AEE6F2 /* duermeTests */,
 				0320C8662B6802AA00AEE6F2 /* duermeUITests */,
 				0320C84A2B6802A900AEE6F2 /* Products */,
@@ -102,14 +103,14 @@
 		0320C84A2B6802A900AEE6F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0320C8492B6802A900AEE6F2 /* duerme.app */,
-				0320C8592B6802AA00AEE6F2 /* duermeTests.xctest */,
-				0320C8632B6802AA00AEE6F2 /* duermeUITests.xctest */,
+				0320C8492B6802A900AEE6F2 /* zloop.app */,
+				0320C8592B6802AA00AEE6F2 /* zloopTests.xctest */,
+				0320C8632B6802AA00AEE6F2 /* zloopUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0320C84B2B6802A900AEE6F2 /* duerme */ = {
+		0320C84B2B6802A900AEE6F2 /* zloop */ = {
 			isa = PBXGroup;
 			children = (
 				A115D2ED2D93589E00AD2578 /* Components */,
@@ -122,7 +123,7 @@
 				034B6DF92B684D3000610698 /* Info.plist */,
 				0320C8522B6802AA00AEE6F2 /* Preview Content */,
 			);
-			path = duerme;
+			path = zloop;
 			sourceTree = "<group>";
 		};
 		0320C8522B6802AA00AEE6F2 /* Preview Content */ = {
@@ -154,6 +155,7 @@
 		0320C8762B6807F600AEE6F2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A117AEF22D94510700ECCA25 /* LICENSE.txt */,
 				A173885E2D55E4EB006ED33C /* lluvia-pojoclan.wav */,
 				03F1FF6B2C350A9F00A50E28 /* lluvia-fuerte.wav */,
 				03F930972B6AED180037A4F3 /* rain.wav */,
@@ -184,9 +186,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0320C8482B6802A900AEE6F2 /* duerme */ = {
+		0320C8482B6802A900AEE6F2 /* zloop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0320C86D2B6802AA00AEE6F2 /* Build configuration list for PBXNativeTarget "duerme" */;
+			buildConfigurationList = 0320C86D2B6802AA00AEE6F2 /* Build configuration list for PBXNativeTarget "zloop" */;
 			buildPhases = (
 				0320C8452B6802A900AEE6F2 /* Sources */,
 				0320C8462B6802A900AEE6F2 /* Frameworks */,
@@ -196,14 +198,14 @@
 			);
 			dependencies = (
 			);
-			name = duerme;
+			name = zloop;
 			productName = duerme;
-			productReference = 0320C8492B6802A900AEE6F2 /* duerme.app */;
+			productReference = 0320C8492B6802A900AEE6F2 /* zloop.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0320C8582B6802AA00AEE6F2 /* duermeTests */ = {
+		0320C8582B6802AA00AEE6F2 /* zloopTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0320C8702B6802AA00AEE6F2 /* Build configuration list for PBXNativeTarget "duermeTests" */;
+			buildConfigurationList = 0320C8702B6802AA00AEE6F2 /* Build configuration list for PBXNativeTarget "zloopTests" */;
 			buildPhases = (
 				0320C8552B6802AA00AEE6F2 /* Sources */,
 				0320C8562B6802AA00AEE6F2 /* Frameworks */,
@@ -214,14 +216,14 @@
 			dependencies = (
 				0320C85B2B6802AA00AEE6F2 /* PBXTargetDependency */,
 			);
-			name = duermeTests;
+			name = zloopTests;
 			productName = duermeTests;
-			productReference = 0320C8592B6802AA00AEE6F2 /* duermeTests.xctest */;
+			productReference = 0320C8592B6802AA00AEE6F2 /* zloopTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0320C8622B6802AA00AEE6F2 /* duermeUITests */ = {
+		0320C8622B6802AA00AEE6F2 /* zloopUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0320C8732B6802AA00AEE6F2 /* Build configuration list for PBXNativeTarget "duermeUITests" */;
+			buildConfigurationList = 0320C8732B6802AA00AEE6F2 /* Build configuration list for PBXNativeTarget "zloopUITests" */;
 			buildPhases = (
 				0320C85F2B6802AA00AEE6F2 /* Sources */,
 				0320C8602B6802AA00AEE6F2 /* Frameworks */,
@@ -232,9 +234,9 @@
 			dependencies = (
 				0320C8652B6802AA00AEE6F2 /* PBXTargetDependency */,
 			);
-			name = duermeUITests;
+			name = zloopUITests;
 			productName = duermeUITests;
-			productReference = 0320C8632B6802AA00AEE6F2 /* duermeUITests.xctest */;
+			productReference = 0320C8632B6802AA00AEE6F2 /* zloopUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -260,7 +262,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0320C8442B6802A900AEE6F2 /* Build configuration list for PBXProject "duerme" */;
+			buildConfigurationList = 0320C8442B6802A900AEE6F2 /* Build configuration list for PBXProject "zloop" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -273,9 +275,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0320C8482B6802A900AEE6F2 /* duerme */,
-				0320C8582B6802AA00AEE6F2 /* duermeTests */,
-				0320C8622B6802AA00AEE6F2 /* duermeUITests */,
+				0320C8482B6802A900AEE6F2 /* zloop */,
+				0320C8582B6802AA00AEE6F2 /* zloopTests */,
+				0320C8622B6802AA00AEE6F2 /* zloopUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -344,12 +346,12 @@
 /* Begin PBXTargetDependency section */
 		0320C85B2B6802AA00AEE6F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0320C8482B6802A900AEE6F2 /* duerme */;
+			target = 0320C8482B6802A900AEE6F2 /* zloop */;
 			targetProxy = 0320C85A2B6802AA00AEE6F2 /* PBXContainerItemProxy */;
 		};
 		0320C8652B6802AA00AEE6F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0320C8482B6802A900AEE6F2 /* duerme */;
+			target = 0320C8482B6802A900AEE6F2 /* zloop */;
 			targetProxy = 0320C8642B6802AA00AEE6F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -479,18 +481,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"duerme/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"zloop/Preview Content\"";
 				DEVELOPMENT_TEAM = ERWA32UVX2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = duerme/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Duerme;
+				INFOPLIST_FILE = zloop/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Zloop;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -505,7 +510,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -514,18 +519,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"duerme/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"zloop/Preview Content\"";
 				DEVELOPMENT_TEAM = ERWA32UVX2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = duerme/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Duerme;
+				INFOPLIST_FILE = zloop/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Zloop;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -540,7 +548,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -559,7 +567,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/duerme.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/duerme";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zloop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/zloop";
 			};
 			name = Debug;
 		};
@@ -578,7 +586,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/duerme.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/duerme";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zloop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/zloop";
 			};
 			name = Release;
 		};
@@ -619,7 +627,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0320C8442B6802A900AEE6F2 /* Build configuration list for PBXProject "duerme" */ = {
+		0320C8442B6802A900AEE6F2 /* Build configuration list for PBXProject "zloop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0320C86B2B6802AA00AEE6F2 /* Debug */,
@@ -628,7 +636,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0320C86D2B6802AA00AEE6F2 /* Build configuration list for PBXNativeTarget "duerme" */ = {
+		0320C86D2B6802AA00AEE6F2 /* Build configuration list for PBXNativeTarget "zloop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0320C86E2B6802AA00AEE6F2 /* Debug */,
@@ -637,7 +645,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0320C8702B6802AA00AEE6F2 /* Build configuration list for PBXNativeTarget "duermeTests" */ = {
+		0320C8702B6802AA00AEE6F2 /* Build configuration list for PBXNativeTarget "zloopTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0320C8712B6802AA00AEE6F2 /* Debug */,
@@ -646,7 +654,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0320C8732B6802AA00AEE6F2 /* Build configuration list for PBXNativeTarget "duermeUITests" */ = {
+		0320C8732B6802AA00AEE6F2 /* Build configuration list for PBXNativeTarget "zloopUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0320C8742B6802AA00AEE6F2 /* Debug */,

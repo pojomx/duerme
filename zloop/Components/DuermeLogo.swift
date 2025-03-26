@@ -10,17 +10,11 @@ import SwiftUI
 struct DuermeLogo: View {
     var body: some View {
         ZStack {
-            
-
-            
             Circle()
-                .frame(width: 100, height: 100)
                 .mask {
                     ZStack{
                         Circle()
                             .frame(width: 100, height: 100, alignment: .topLeading)
-                            .foregroundColor(.red)
-                            
                         Circle()
                             .blendMode(.destinationOut)
                             .frame(width: 60, height: 60, alignment: .topLeading)
@@ -37,14 +31,9 @@ struct DuermeLogo: View {
                 .padding(.trailing, 35)
             
         }
-        
-
     }
 }
 
 #Preview {
-    List
-    {
-        DuermeLogo().frame(width: 100, height: 100)
-    }
+    DuermeLogo()
 }

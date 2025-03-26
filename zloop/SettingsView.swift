@@ -16,17 +16,13 @@ struct SettigsView: View {
                     Spacer()
                     //Image(systemName: "laurel.leading")
                     //    .font(.system(size: 60, weight: .black))
-                    
-                    DuermeLogo()
-                    
+                    DuermeLogo().frame(width: 100, height: 100)
                     VStack (spacing: -6) {
-                        Text("Duerme")
+                        Text("Zloop")
                             .font(.system(size: 40, weight: .black))
                         Text("Sonidos para dormir")
                             .fontWeight(.medium)
                     }
-                    //Image(systemName: "laurel.trailing")
-                    ///    .font(.system(size: 60, weight: .black))
                     Spacer()
                 }
                 .foregroundStyle(
