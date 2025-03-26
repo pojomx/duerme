@@ -14,16 +14,19 @@ struct SettigsView: View {
             Section {
                 HStack {
                     Spacer()
-                    Image(systemName: "laurel.leading")
-                        .font(.system(size: 60, weight: .black))
+                    //Image(systemName: "laurel.leading")
+                    //    .font(.system(size: 60, weight: .black))
+                    
+                    DuermeLogo()
+                    
                     VStack (spacing: -6) {
-                        Text("Sleep")
-                            .font(.system(size: 50, weight: .black))
-                        Text("Nature Sounds")
+                        Text("Duerme")
+                            .font(.system(size: 40, weight: .black))
+                        Text("Sonidos para dormir")
                             .fontWeight(.medium)
                     }
-                    Image(systemName: "laurel.trailing")
-                        .font(.system(size: 60, weight: .black))
+                    //Image(systemName: "laurel.trailing")
+                    ///    .font(.system(size: 60, weight: .black))
                     Spacer()
                 }
                 .foregroundStyle(
@@ -32,13 +35,15 @@ struct SettigsView: View {
                 .padding(.top, 8)
                 
                 VStack (spacing: 8) {
-                    Text("Where can you find more sounds?")
+                    Text("Sobre los sonidos")
                         .font(.title2)
                         .fontWeight(.heavy)
-                    Text("The hike which looks gorgeous in photos bit is even better once")
+                    Text("Los sonidos disponibles (por ahora solo uno) en la aplicación son sonidos que he grabado con mi iPhone. No es la mejor calidad, es casi ruido blanco (si pones atención se escuchan algunas gotas grandes), pero me han ayudado a conciliar el sueño.")
+                    //Text("For now, there is only one sound I recorded with my iPhone, is not the best quality, but it has helped me into sleep, you are free to use it as you want.")
                         .font(.footnote)
-                        .italic()
-                    Text("Is now time to sleep!")
+                         .italic()
+                    
+                    Text("Ten dulces sueños!")
                         .fontWeight(.heavy)
                         .foregroundColor(.pink)
                 }
@@ -52,14 +57,35 @@ struct SettigsView: View {
             // MARK: - Section Icons
             // MARK: - Section About
             Section {
-                Link("twitter.com/pojomx", destination: URL(string: "https://www.x.com/pojomx")!)
-                    .padding()
-                    .tint(.red)
+                
+                Text("Esta aplicación será gratuita, no pretendo conseguir dinero con ella, la hice porque la que utilizaba comenzó a cobrar por reproducir los sonidos, y me resultaba más sencillo hacer una que hiciera solo eso.\n\nPara dudas, quejas o sugerencias, síganme en mis redes sociales!")
+                .font(.footnote)
+                
+                CustomListRowView(
+                    rowContent: "twitter.com/pojomx",
+                    rowLabel: "Twitter/X",
+                    rowIcon: "bird",
+                    rowTintColor: .pink,
+                    rowURL: "https://x.com/pojomx")
+                
+                CustomListRowView(
+                    rowContent: "twitch.tv/pojomx",
+                    rowLabel: "Twitch",
+                    rowIcon: "gamecontroller",
+                    rowTintColor: .purple,
+                    rowURL: "https://twitch.tv/pojomx")
+                
+                
+            } header: {
+                Text("Sobre la aplicación")
+            } footer: {
+                HStack{
+                    Spacer()
+                    Text("Versión 1.0 | Diseño basado en un tutorial.")
+                    Spacer()
+                }.padding(.vertical, 8)
             }
         }
-            
-            
-            
     }
 }
 

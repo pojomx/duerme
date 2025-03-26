@@ -37,6 +37,7 @@ struct ContentView: View {
                     Image(systemName: "info.circle")
                         .resizable()
                         .frame(width:20, height: 20)
+                        .foregroundStyle(LinearGradient(colors: [.pink, .purple], startPoint: .top, endPoint: .bottom))
                 }
                 .sheet(isPresented: $isShowingSheet) {
                     SettigsView()
@@ -45,11 +46,9 @@ struct ContentView: View {
                 }
             }
 
-            Image(systemName: "moon.circle.fill")
-                .resizable()
-                .frame(width: 100, height: 100)
-                .padding()
-                .padding(.top, -10)
+            
+            DuermeLogo()
+                .foregroundStyle(LinearGradient(colors: [.pink, .purple], startPoint: .top, endPoint: .bottom))
             
             Spacer()
             Section {
@@ -70,6 +69,8 @@ struct ContentView: View {
                     }
                 }
             }
+            .foregroundStyle(LinearGradient(colors: [.pink, .purple], startPoint: .top, endPoint: .bottom))
+            
             Spacer()
             Button {
                 self.playSounds()
@@ -79,8 +80,9 @@ struct ContentView: View {
                     .frame(width:50, height: 50)
                 
             }
+            .foregroundStyle(LinearGradient(colors: [.pink, .purple], startPoint: .top, endPoint: .bottom))
         }
-        .foregroundStyle(LinearGradient(colors: [.pink, .purple], startPoint: .top, endPoint: .bottom))
+        
         .padding()
         .onAppear(perform: {
             playSounds()
